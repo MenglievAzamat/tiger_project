@@ -31,7 +31,7 @@ if (isset($_SESSION["user"])) {
         <link rel="stylesheet" type="text/css" href="../css/main.css">
     </head>
     <body>
-    <section id="admin">
+    <section id="admin" style="display: -webkit-box;">
         <div style="display: table-caption;margin-right: auto;margin-left: auto;">
             <form action="index.php" method="post">
                 <input type="text" name="title" placeholder="Title...">
@@ -45,7 +45,7 @@ if (isset($_SESSION["user"])) {
             </form>
         </div>
 
-        <div class="pages" style="display: grid">
+        <div class="pages" style="display: grid; margin-left: 50px;">
             <?
             $pages = R::find("pages");
 
