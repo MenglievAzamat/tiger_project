@@ -3,7 +3,7 @@
 namespace Templates;
 
 class Block {
-    public static function generate($page) : string{
+    public static function generate($page) {
         $result = "
             <div style='display: inline-flex'>
                 <div>
