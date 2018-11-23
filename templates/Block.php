@@ -7,9 +7,11 @@ class Block {
         $result = "
             <div style='display: inline-flex'>
                 <div>
+                    <h1>
                     <a href='../templates/page.block.template.php?id=$page->id'>" . $page->title . "</a>|
                     " . $page->tag . "|
                     " . $page->descriptions . "|
+                    </h1>
                 </div>
                 
                 <div>
