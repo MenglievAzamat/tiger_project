@@ -16,5 +16,7 @@ $page = R::load("pages", $_GET["id"]);
     <?=$page->content?><br>
     <?=$page->tag?><br>
     <?=$page->description?><br>
+    <img src="<?=$page->img_first?>" alt="">
+    <img src="<?=$page->img_second?>" alt="">
 </body>
 </html>

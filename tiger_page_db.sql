@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 22 2018 г., 18:31
+-- Время создания: Ноя 27 2018 г., 19:39
 -- Версия сервера: 5.7.20
 -- Версия PHP: 7.2.0
 
@@ -32,23 +32,21 @@ CREATE TABLE `pages` (
   `id` int(11) NOT NULL,
   `title` varchar(50) NOT NULL,
   `offer` text NOT NULL,
-  `img` text NOT NULL,
   `text_title` text NOT NULL,
   `content` text NOT NULL,
   `tag` text NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `img_first` varchar(255) DEFAULT NULL,
+  `img_second` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Таблица страниц';
 
 --
 -- Дамп данных таблицы `pages`
 --
 
-INSERT INTO `pages` (`id`, `title`, `offer`, `img`, `text_title`, `content`, `tag`, `description`) VALUES
-(1, 'Test', 'Test offer', 'img url', 'Test text title', 'Test content', '#tag', 'description'),
-(2, 'Test2', 'Offer', 'IMG', 'Text Title', 'COnten', 'Tag', 'Descr'),
-(4, '2', 'qweqwe', '347573-19.jpg', 'qwqwe', 'qweqwe', 'qweqwe', 'ewewe'),
-(6, '3', 'qweqwe', '', 'qweqwe', 'qweqwe', 'qweqwe', 'qweqwe'),
-(7, 'Changed', 'sdasd', '', 'asdasd', 'sadasd', 'asdasd', 'asdasd');
+INSERT INTO `pages` (`id`, `title`, `offer`, `text_title`, `content`, `tag`, `description`, `img_first`, `img_second`) VALUES
+(1, 'Test Title', 'Offer', 'Text title', 'CTA', '', 'Description', NULL, NULL),
+(4, 'qwe', 'qwe', 'qwe', 'qwe', '', 'qwe', '../img/347573-19.jpg', '../img/3_2.jpg');
 
 --
 -- Индексы сохранённых таблиц
@@ -68,7 +66,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT для таблицы `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
